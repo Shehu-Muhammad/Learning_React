@@ -13,7 +13,7 @@ function App() {
       {clicked && (
         <Alert>
           <div
-            className='alert alert-warning alert-dismissible fade show'
+            className='alert alert-primary alert-dismissible fade show'
             role='alert'
           >
             <strong>Holy guacamole!</strong> You should check in on some of
