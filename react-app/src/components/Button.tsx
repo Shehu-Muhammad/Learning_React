@@ -1,12 +1,14 @@
 interface Props {
-  text: string;
+  children: string;
+  color?: 'primary' | 'secondary' | 'danger';
+  onClick: () => void;
 }
 
-const Button = ({ text }: Props) => {
+const Button = ({ children, onClick, color = 'primary' }: Props) => {
   return (
-    <div className={'btn btn-' + text}>
-      {text.charAt(0).toLocaleUpperCase() + text.slice(1)}
-    </div>
+    <button className={'btn btn-' + color} onClick={onClick}>
+      {children}
+    </button>
   );
 };
 
